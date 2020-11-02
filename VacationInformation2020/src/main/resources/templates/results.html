@@ -7,14 +7,14 @@
 <body>
 <form>
 <table>
-<tr th:each="currentContact: ${contact}">
+<tr th:each="currentContact: ${contacts}">
 	<td th:text="${currentContact.id}" />
 	<td th:text="${currentContact.name}" />
 	<td th:text="${currentContact.phone}" />
 	<td th:text="${currentContact.takingTrip}" />
 	<td th:text="${currentContact.destination.country}" />
-	<td th:text="${currentContact.address.state}" />
-	<td th:text="${currentContact.address.city}" />
+	<td th:text="${currentContact.destination.state}" />
+	<td th:text="${currentContact.destination.city}" />
 	<td><a th:href="@{/edit/{id}(id=${currentContact.id})}">Edit</a></td>
 	<td><a th:href="@{/delete/{id}(id=${currentContact.id})}">Delete</a></td>
 	</tr>

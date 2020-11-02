@@ -21,7 +21,7 @@ public class WebController {
 			return addNewContact(model);
 		}
 
-		model.addAttribute("contact", repo.findAll());
+		model.addAttribute("contacts", repo.findAll());
 		return "results";
 	}
 	
